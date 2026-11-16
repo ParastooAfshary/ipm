@@ -1,0 +1,85 @@
+{
+  "subject": "CoRR-HNU subj01 session1",
+  "atlas": "Yeo 2011 group-reference seven networks, original CBIG fsaverage5 surface annotations",
+  "is_individual_specific_parcellation": false,
+  "frames_total": 296,
+  "frames_retained": 286,
+  "censor_convention": "0=high motion/outlier, 1=low motion/retained (CBIG documentation)",
+  "networks": [
+    "Visual",
+    "Somatomotor",
+    "DorsalAttention",
+    "VentralAttention",
+    "Limbic",
+    "Frontoparietal",
+    "DefaultMode"
+  ],
+  "valid_vertices_per_network": {
+    "Visual": 2760,
+    "Somatomotor": 3749,
+    "DorsalAttention": 2196,
+    "VentralAttention": 2301,
+    "Limbic": 1438,
+    "Frontoparietal": 2434,
+    "DefaultMode": 3837
+  },
+  "annotation_source_urls": {
+    "lh": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/master/stable_projects/brain_parcellation/Yeo2011_fcMRI_clustering/1000subjects_reference/Yeo_JNeurophysiol11_SplitLabels/fsaverage5/label/lh.Yeo2011_7Networks_N1000.annot",
+    "rh": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/master/stable_projects/brain_parcellation/Yeo2011_fcMRI_clustering/1000subjects_reference/Yeo_JNeurophysiol11_SplitLabels/fsaverage5/label/rh.Yeo2011_7Networks_N1000.annot"
+  },
+  "annotation_details": {
+    "lh": {
+      "annotation_labels": {
+        "1": "7Networks_1",
+        "2": "7Networks_2",
+        "3": "7Networks_3",
+        "4": "7Networks_4",
+        "5": "7Networks_5",
+        "6": "7Networks_6",
+        "7": "7Networks_7"
+      },
+      "mapping_mode": "explicit_network_number",
+      "vertices_by_network": {
+        "Visual": 1352,
+        "Somatomotor": 1861,
+        "DorsalAttention": 1094,
+        "VentralAttention": 1087,
+        "Limbic": 712,
+        "Frontoparietal": 1041,
+        "DefaultMode": 2207
+      },
+      "unlabeled_vertices": 888
+    },
+    "rh": {
+      "annotation_labels": {
+        "1": "7Networks_1",
+        "2": "7Networks_2",
+        "3": "7Networks_3",
+        "4": "7Networks_4",
+        "5": "7Networks_5",
+        "6": "7Networks_6",
+        "7": "7Networks_7"
+      },
+      "mapping_mode": "explicit_network_number",
+      "vertices_by_network": {
+        "Visual": 1408,
+        "Somatomotor": 1888,
+        "DorsalAttention": 1102,
+        "VentralAttention": 1214,
+        "Limbic": 726,
+        "Frontoparietal": 1393,
+        "DefaultMode": 1630
+      },
+      "unlabeled_vertices": 881
+    }
+  },
+  "qc": {
+    "total_surface_vertices": 20484,
+    "finite_varying_labeled_vertices": 18715,
+    "excluded_nonfinite": 1769,
+    "excluded_constant": 0,
+    "excluded_unlabeled_after_qc": 0,
+    "frames_retained": 286
+  },
+  "interpretation": "Network-mean FC is based on mean time courses. Mean pairwise vertex FC is a separate statistic; its diagonal excludes self-correlations. Group Yeo networks are not subject-specific Kong MS-HBM networks. Spatial matching between CBIG fMRI and CBIG surface atlas is assumed and should be independently verified."
+}

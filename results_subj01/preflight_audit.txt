@@ -1,0 +1,19 @@
+IPM preflight audit | CoRR-HNU subj01
+Technical checks: 10/10 passed
+PASS: Same time dimension LH/RH/censor | 
+PASS: Censor has 286 retained of 296 frames | 286/296; Censor vector matched fMRI length.
+PASS: lh nonfinite mask matches Yeo medial wall exactly | 888 overlap; 0 mismatches
+PASS: rh nonfinite mask matches Yeo medial wall exactly | 881 overlap; 0 mismatches
+PASS: Saved ROI matrix shape 286 x 148 | (286, 148)
+PASS: ROI vertex counts reproduced from atlas and MRI | 0 discrepancies
+PASS: ROI time series reproduced from original MRI | max absolute difference=0
+PASS: Yeo7 network time series reproduced from original MRI | max absolute difference=8.88e-16
+PASS: Yeo7 mean-network FC reproduced from saved series | max absolute difference=4.69e-10
+PASS: Yeo7 pairwise vertex FC symmetric and within [-1,1] | 
+
+Split-half network edge-pattern correlation (exploratory): 0.8946
+Split-half max edge delta: 0.3240
+Censor sensitivity max edge delta: 0.0114
+DMN-DAN first/second: -0.7614 / -0.7145
+DMN-DAN with/without censor: -0.7368 / -0.7389
+WARNING: Split-half is not test-retest; scientific validity is not established by this audit.

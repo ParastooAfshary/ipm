@@ -1,0 +1,56 @@
+{
+  "subject": "CoRR-HNU subj01 session1",
+  "atlas": "Destrieux 2010 anatomical cortical surface atlas, fsaverage5",
+  "frames_retained": 286,
+  "frames_total": 296,
+  "n_rois": 148,
+  "n_unique_edges": 10878,
+  "max_abs_difference_recomputed_fc": 2.220446049250313e-16,
+  "vertex_qc": {
+    "lh": {
+      "total": 10242,
+      "usable": 9354,
+      "nonfinite_excluded": 888,
+      "constant_excluded": 0
+    },
+    "rh": {
+      "total": 10242,
+      "usable": 9361,
+      "nonfinite_excluded": 881,
+      "constant_excluded": 0
+    }
+  },
+  "checks": {
+    "Shapes consistent": true,
+    "ROI metadata count": true,
+    "Frame count matches original QC": true,
+    "ROI count matches original QC": true,
+    "No NaN/Inf in ROI series or matrices": true,
+    "Pearson correlations within [-1, 1]": true,
+    "Pearson matrix symmetric": true,
+    "Pearson diagonal equals 1": true,
+    "Fisher matrix symmetric": true,
+    "Fisher diagonal equals 0 (self-edges excluded)": true,
+    "Edge vector length": true,
+    "Fisher z matches Pearson r": true,
+    "Saved edge vector matches Fisher matrix": true,
+    "Pearson FC reproducible from ROI series": true
+  },
+  "all_checks_passed": true,
+  "fc_statistics": {
+    "pearson_mean": 0.015702783695631276,
+    "pearson_median": -0.01478477211004833,
+    "pearson_min": -0.7226375806628076,
+    "pearson_max": 0.9616953702168674,
+    "pearson_p05": -0.3940787820563021,
+    "pearson_p95": 0.5459473057174069,
+    "fraction_abs_r_over_0_9": 0.00045964331678617393,
+    "fraction_abs_r_over_0_99": 0.0
+  },
+  "interpretation_limitations": [
+    "Passing numerical checks does not establish scientific validity or individual-network reproducibility.",
+    "Censor file polarity and surface-to-atlas vertex correspondence should be confirmed against source documentation.",
+    "Destrieux is an anatomical atlas, not Kong MS-HBM individual-specific network parcellation.",
+    "Single session/subject cannot establish test-retest stability or between-subject effects."
+  ]
+}

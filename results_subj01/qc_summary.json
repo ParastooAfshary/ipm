@@ -1,0 +1,58 @@
+{
+  "status": "completed_real_data_analysis",
+  "subject": "CoRR-HNU subj01 session1",
+  "run_utc": "2026-11-16T11:33:27.100724+00:00",
+  "atlas": "Destrieux 2010 anatomical cortical surface atlas, fsaverage5",
+  "note": "Atlas is fixed anatomical ROIs, NOT subject-specific MS-HBM network parcellation.",
+  "input_files": {
+    "lh_fs5": "C:\\Users\\USER\\Desktop\\ipm-1sub\\lh.subj01_sess1_bld002_rest_skip4_stc_mc_residc_interp_FDRMS0.2_DVARS50_bp_0.009_0.08_fs6_sm6_fs5.nii.gz",
+    "rh_fs5": "C:\\Users\\USER\\Desktop\\ipm-1sub\\rh.subj01_sess1_bld002_rest_skip4_stc_mc_residc_interp_FDRMS0.2_DVARS50_bp_0.009_0.08_fs6_sm6_fs5.nii.gz",
+    "censor": "C:\\Users\\USER\\Desktop\\ipm-1sub\\subj01_sess1_bld002_FDRMS0.2_DVARS50_motion_outliers.txt"
+  },
+  "nifti_shapes": {
+    "lh": [
+      3414,
+      1,
+      3,
+      296
+    ],
+    "rh": [
+      3414,
+      1,
+      3,
+      296
+    ]
+  },
+  "surface_vertices": {
+    "lh": {
+      "total": 10242,
+      "usable": 9354,
+      "nonfinite_excluded": 888,
+      "constant_excluded": 0
+    },
+    "rh": {
+      "total": 10242,
+      "usable": 9361,
+      "nonfinite_excluded": 881,
+      "constant_excluded": 0
+    }
+  },
+  "frames_total": 296,
+  "frames_retained": 286,
+  "frames_censored": 10,
+  "censor_note": "Censor vector matched fMRI length.",
+  "n_rois": 148,
+  "n_fc_edges": 10878,
+  "off_diagonal_mean_pearson": 0.015702783695631276,
+  "off_diagonal_mean_absolute_pearson": 0.22517091441518583,
+  "python": "3.13.2",
+  "numpy": "2.5.5",
+  "nilearn": "0.14.1",
+  "nibabel": "5.5.0",
+  "next_steps": [
+    "MS-HBM individual-specific parcellation using official CBIG MATLAB implementation and fsaverage6 files",
+    "Ladwig LPFC analyses after checking compatible data and network definitions",
+    "T1 + CHARM + SimNIBS E-field simulation on matched subject when structural MRI is available",
+    "Cross-subject SNF and clustering only after multiple subjects are processed"
+  ]
+}

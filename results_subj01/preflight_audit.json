@@ -1,0 +1,208 @@
+{
+  "purpose": "preflight audit of current single-subject atlas-based FC",
+  "checks": {
+    "Same time dimension LH/RH/censor": {
+      "passed": true,
+      "detail": ""
+    },
+    "Censor has 286 retained of 296 frames": {
+      "passed": true,
+      "detail": "286/296; Censor vector matched fMRI length."
+    },
+    "lh nonfinite mask matches Yeo medial wall exactly": {
+      "passed": true,
+      "detail": "888 overlap; 0 mismatches"
+    },
+    "rh nonfinite mask matches Yeo medial wall exactly": {
+      "passed": true,
+      "detail": "881 overlap; 0 mismatches"
+    },
+    "Saved ROI matrix shape 286 x 148": {
+      "passed": true,
+      "detail": "(286, 148)"
+    },
+    "ROI vertex counts reproduced from atlas and MRI": {
+      "passed": true,
+      "detail": "0 discrepancies"
+    },
+    "ROI time series reproduced from original MRI": {
+      "passed": true,
+      "detail": "max absolute difference=0"
+    },
+    "Yeo7 network time series reproduced from original MRI": {
+      "passed": true,
+      "detail": "max absolute difference=8.88e-16"
+    },
+    "Yeo7 mean-network FC reproduced from saved series": {
+      "passed": true,
+      "detail": "max absolute difference=4.69e-10"
+    },
+    "Yeo7 pairwise vertex FC symmetric and within [-1,1]": {
+      "passed": true,
+      "detail": ""
+    }
+  },
+  "diagnostics": {
+    "censored_frame_numbers_1_based": [
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      213,
+      214,
+      215,
+      216
+    ],
+    "nifti_shapes": {
+      "lh": [
+        3414,
+        1,
+        3,
+        296
+      ],
+      "rh": [
+        3414,
+        1,
+        3,
+        296
+      ]
+    },
+    "medial_wall_mask_overlap": {
+      "lh": {
+        "nonfinite_vertices": 888,
+        "unlabeled_yeo_vertices": 888,
+        "intersection": 888,
+        "xor_mismatch": 0
+      },
+      "rh": {
+        "nonfinite_vertices": 881,
+        "unlabeled_yeo_vertices": 881,
+        "intersection": 881,
+        "xor_mismatch": 0
+      }
+    },
+    "roi_reconstruction": {
+      "max_abs_difference": 0.0,
+      "vertex_count_errors": []
+    },
+    "yeo_reconstruction": {
+      "network_ts_max_abs_difference": 8.881784197001252e-16,
+      "network_fc_max_abs_difference": 4.68501487604911e-10
+    },
+    "sensitivity": {
+      "split_half": {
+        "n_first": 143,
+        "n_second": 143,
+        "edge_pattern_correlation": 0.8945879126844765,
+        "max_abs_edge_difference": 0.324049487808751,
+        "DMN_DAN_first": -0.7614365313179958,
+        "DMN_DAN_second": -0.7144986997703912,
+        "DMN_Visual_first": -0.6543531387376005,
+        "DMN_Visual_second": -0.5860097231010866
+      },
+      "censor_sensitivity": {
+        "max_abs_edge_difference_all_vs_kept": 0.01142235273041127,
+        "DMN_DAN_all_frames": -0.7389372185009355,
+        "DMN_DAN_kept_frames": -0.736840797
+      },
+      "within_network_hemisphere_breakdown": {
+        "Visual": {
+          "lh": {
+            "n_vertices": 1352,
+            "mean_pairwise_r": 0.2874913384848407
+          },
+          "rh": {
+            "n_vertices": 1408,
+            "mean_pairwise_r": 0.2532149628133727
+          }
+        },
+        "Somatomotor": {
+          "lh": {
+            "n_vertices": 1861,
+            "mean_pairwise_r": 0.1286627146369638
+          },
+          "rh": {
+            "n_vertices": 1888,
+            "mean_pairwise_r": 0.0964857499668703
+          }
+        },
+        "DorsalAttention": {
+          "lh": {
+            "n_vertices": 1094,
+            "mean_pairwise_r": 0.22154869499271265
+          },
+          "rh": {
+            "n_vertices": 1102,
+            "mean_pairwise_r": 0.21863604627679525
+          }
+        },
+        "VentralAttention": {
+          "lh": {
+            "n_vertices": 1087,
+            "mean_pairwise_r": 0.3180947827007521
+          },
+          "rh": {
+            "n_vertices": 1214,
+            "mean_pairwise_r": 0.1717037760975992
+          }
+        },
+        "Limbic": {
+          "lh": {
+            "n_vertices": 712,
+            "mean_pairwise_r": 0.14418686531340194
+          },
+          "rh": {
+            "n_vertices": 726,
+            "mean_pairwise_r": 0.08602218654726648
+          }
+        },
+        "Frontoparietal": {
+          "lh": {
+            "n_vertices": 1041,
+            "mean_pairwise_r": 0.24442197923476036
+          },
+          "rh": {
+            "n_vertices": 1393,
+            "mean_pairwise_r": 0.1330441592405286
+          }
+        },
+        "DefaultMode": {
+          "lh": {
+            "n_vertices": 2207,
+            "mean_pairwise_r": 0.15315568380802105
+          },
+          "rh": {
+            "n_vertices": 1630,
+            "mean_pairwise_r": 0.16866690526966982
+          }
+        }
+      }
+    }
+  },
+  "caveats": [
+    "Group Yeo7 and anatomical Destrieux are NOT subject-specific Kong MS-HBM parcellations.",
+    "One run and a split-half diagnostic do not establish independent test-retest reliability.",
+    "Global signal regression and complete preprocessing cannot be established from filenames alone.",
+    "Matching medial-wall masks supports surface indexing but does not independently prove every anatomical vertex is correctly registered.",
+    "fsaverage5 sm6 data are not sufficient for high-resolution Ladwig patch replication."
+  ],
+  "sha256": {
+    "lh_fs5": "d67dc3fae89c8008cf454cbaa5dda45df2d1f9d8855aa9672dd0a7d8d79cc3fa",
+    "rh_fs5": "31d58a5ee7da14f745f068c3a2f05ff2e2e395aae865136de4ae38722396d58d",
+    "censor": "a6d199f2ed303b127367350cfc21c1e4cb78c3c554489e5366f0422b97c92d4e",
+    "yeo_annot_lh": "4d2ea20fa33afa722d35884d27b3577486d8d7e15520d7d23efdd84956139190",
+    "yeo_annot_rh": "53fa768b6c33a3bc8fb5b147d18049684514fcd07e2cbacceeca17cfc21d9e9b",
+    "run_fc.py": "c91a9ba794ce39ca160dd0bf5848ce15b67ee042caed2996bab5128ba9d99484",
+    "run_yeo7.py": "535d9ebc6a81c7657a6b9206373418a290387cadf4234a94d981ff96e82d0841"
+  },
+  "all_technical_checks_passed": true,
+  "recommended_next_actions": [
+    "Verify full preprocessing specification including global signal regression and TR from CBIG source.",
+    "Review split-half and censor-sensitivity diagnostics; avoid significance claims from one run.",
+    "Use official CBIG single-subject MS-HBM wrapper with original fsaverage6 files and compatible priors.",
+    "For Ladwig-style fine LPFC patches obtain suitable high-resolution multi-session data rather than fsaverage5 sm6 alone.",
+    "Use a matched structural T1 from the same participant before any individualized SimNIBS E-field modeling."
+  ]
+}
