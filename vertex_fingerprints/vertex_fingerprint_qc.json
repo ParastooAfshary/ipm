@@ -1,0 +1,125 @@
+{
+  "status": "completed_vertex_to_network_connectivity_fingerprints",
+  "subject": "CoRR-HNU subj01 session1",
+  "generated_utc": "2026-11-20T14:51:32.985718+00:00",
+  "data_space": "fsaverage5",
+  "atlas": "Yeo2011 official group-reference seven networks",
+  "is_official_kong_mshbm": false,
+  "is_validated_individual_parcellation": false,
+  "method": "Pearson correlation between each vertex time series and seven group-atlas network mean time series; own-network mean excludes the vertex itself (leave-one-vertex-out).",
+  "frames_total": 296,
+  "frames_retained": 286,
+  "vertices_total": 20484,
+  "vertices_usable": 18715,
+  "vertices_excluded": 1769,
+  "vertices_by_network": {
+    "Visual": 2760,
+    "Somatomotor": 3749,
+    "DorsalAttention": 2196,
+    "VentralAttention": 2301,
+    "Limbic": 1438,
+    "Frontoparietal": 2434,
+    "DefaultMode": 3837
+  },
+  "fingerprint_matrix_shape": [
+    20484,
+    7
+  ],
+  "mean_fingerprint_by_original_yeo_network": {
+    "Visual": {
+      "Visual": 0.5083077431142574,
+      "Somatomotor": -0.13395317641239787,
+      "DorsalAttention": 0.19442207064530834,
+      "VentralAttention": 0.06110650609995244,
+      "Limbic": -0.2037225323586729,
+      "Frontoparietal": -0.1393753163056356,
+      "DefaultMode": -0.3197268854105492
+    },
+    "Somatomotor": {
+      "Visual": -0.07816825420430924,
+      "Somatomotor": 0.28872180721112517,
+      "DorsalAttention": 0.025516912631712057,
+      "VentralAttention": 0.09502107534794005,
+      "Limbic": 0.006631068634664357,
+      "Frontoparietal": -0.06586430943132883,
+      "DefaultMode": -0.043227322810177604
+    },
+    "DorsalAttention": {
+      "Visual": 0.1464318174927583,
+      "Somatomotor": 0.01085468110856863,
+      "DorsalAttention": 0.4114445237722275,
+      "VentralAttention": 0.16212002437742498,
+      "Limbic": -0.1581156201953402,
+      "Frontoparietal": 0.06531727534312241,
+      "DefaultMode": -0.3027177114991779
+    },
+    "VentralAttention": {
+      "Visual": 0.06116968817712007,
+      "Somatomotor": 0.1892497041152548,
+      "DorsalAttention": 0.202449624621106,
+      "VentralAttention": 0.4604398318708458,
+      "Limbic": -0.01333105719883491,
+      "Frontoparietal": 0.0965583857584046,
+      "DefaultMode": -0.28248672296406907
+    },
+    "Limbic": {
+      "Visual": -0.11828073625434969,
+      "Somatomotor": 0.03663698364129636,
+      "DorsalAttention": -0.10759111930875087,
+      "VentralAttention": 0.012411429220542135,
+      "Limbic": 0.30913673743173137,
+      "Frontoparietal": 0.004016605773139804,
+      "DefaultMode": 0.12093622757696026
+    },
+    "Frontoparietal": {
+      "Visual": -0.088613724009036,
+      "Somatomotor": -0.08866165167584088,
+      "DorsalAttention": 0.0738957465184735,
+      "VentralAttention": 0.07272599625947869,
+      "Limbic": -0.005203011242870512,
+      "Frontoparietal": 0.3412479187095987,
+      "DefaultMode": -0.058423369695872834
+    },
+    "DefaultMode": {
+      "Visual": -0.2271705040075154,
+      "Somatomotor": -0.057662859547914384,
+      "DorsalAttention": -0.26694498138337375,
+      "VentralAttention": -0.21855935786612457,
+      "Limbic": 0.16549663755166996,
+      "Frontoparietal": -0.048169177842331067,
+      "DefaultMode": 0.3613714049992809
+    }
+  },
+  "fraction_own_network_stronger_than_other": {
+    "Visual": 0.8043478260869565,
+    "Somatomotor": 0.6057615364097092,
+    "DorsalAttention": 0.49863387978142076,
+    "VentralAttention": 0.6923076923076923,
+    "Limbic": 0.5904033379694019,
+    "Frontoparietal": 0.5661462612982745,
+    "DefaultMode": 0.618712535835288
+  },
+  "mean_own_minus_best_other": {
+    "Visual": 0.24650819177616579,
+    "Somatomotor": 0.038515057395273826,
+    "DorsalAttention": -0.007438120596805923,
+    "VentralAttention": 0.09097751874288477,
+    "Limbic": 0.02420169200586571,
+    "Frontoparietal": 0.03756942945846706,
+    "DefaultMode": 0.10457943005810734
+  },
+  "previous_yeo_timeseries_max_abs_difference": 0.0,
+  "censor_note": "Censor vector matched fMRI length.",
+  "input_files": {
+    "lh_fs5": "C:\\Users\\USER\\Desktop\\ipm-1sub\\lh.subj01_sess1_bld002_rest_skip4_stc_mc_residc_interp_FDRMS0.2_DVARS50_bp_0.009_0.08_fs6_sm6_fs5.nii.gz",
+    "rh_fs5": "C:\\Users\\USER\\Desktop\\ipm-1sub\\rh.subj01_sess1_bld002_rest_skip4_stc_mc_residc_interp_FDRMS0.2_DVARS50_bp_0.009_0.08_fs6_sm6_fs5.nii.gz",
+    "censor": "C:\\Users\\USER\\Desktop\\ipm-1sub\\subj01_sess1_bld002_FDRMS0.2_DVARS50_motion_outliers.txt"
+  },
+  "scientific_limitations": [
+    "This is a vertex-level FC fingerprint analysis, NOT the official Kong MS-HBM algorithm.",
+    "The group Yeo atlas is used to construct the reference time courses; agreement with it is NOT independent validation.",
+    "The preferred-network array is a descriptive diagnostic, NOT a validated individual-specific parcellation.",
+    "No independent sessions, group priors, MS-HBM Bayesian inference, LPFC fine-scale replication, or E-field simulation were performed.",
+    "Preprocessing provenance, including global signal regression, requires independent verification."
+  ]
+}
